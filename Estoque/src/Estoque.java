@@ -41,25 +41,21 @@ public class Estoque {
 
     public void darBaixa(int qtde){
         if(qtde < qtdMinima){
-            qtdAtual = qtdAtual - qtde;
+            qtdAtual -=qtde;
         }
         else{
             System.out.println("O estoque não pode ficar negativo");
         }
     }
     public String mostra(){
-        return "Nome do produto: "+ this.nome + "\nQtd minima: " + this.qtdMinima + "\nQtd atual: " +  this.qtdAtual;
+        return "Nome do produto: "+ getNome() + "\nQtd minima: " + getQtdMinima() + "\nQtd atual: " +  getQtdAtual();
 
     }
     boolean precisaRepor(){
-        boolean r;
-        if(this.qtdAtual<=this.qtdMinima) {
-            r = true;
-            System.out.println("Precisa repor o estoque, quantidade atual menor que quantidade minima");
-        }
+        if(qtdAtual<=qtdMinima)
+            return true;
         else
-            r = false;
-        return r;
+            return false;
 
     }
 }
