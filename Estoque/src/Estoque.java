@@ -48,12 +48,12 @@ public class Estoque {
         }
     }
     public String mostra(){
-        return "Nome do produto: "+ nome + "\nQtd minima: " + qtdMinima + "\nQtd atual: " +  qtdAtual;
+        return "Nome do produto: "+ this.nome + "\nQtd minima: " + this.qtdMinima + "\nQtd atual: " +  this.qtdAtual;
 
     }
     boolean precisaRepor(){
         boolean r;
-        if(qtdAtual<=qtdMinima) {
+        if(this.qtdAtual<=this.qtdMinima) {
             r = true;
             System.out.println("Precisa repor o estoque, quantidade atual menor que quantidade minima");
         }
