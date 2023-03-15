@@ -9,6 +9,7 @@ public class Calcula {
         this.nroDeMeses = nroDeMeses;
     }
 
+
     public double calcularEMostrar() {
         invInicial = invInicial + ((invInicial * taxaDoInvestimento) / 100);
         return invInicial;
